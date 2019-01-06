@@ -8,14 +8,13 @@ public class Main1 {
 
     public static void main(String[] args) {
 
-guessNum();
+        guessNum();
     }
 
 
     static void guessNum() {
         Random r = new Random();
         int rand = r.nextInt(101);
-        System.out.println(rand);
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Guess the number: ");
@@ -30,7 +29,7 @@ guessNum();
             } else if (number > rand) {
                 System.out.println("Too much!");
             } else if (number == rand) {
-                System.out.println("Zgadles");
+                System.out.println("You guessed! CONGRATULATIONS!!!");
                 break;
             }
         }
