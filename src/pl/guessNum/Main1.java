@@ -11,7 +11,6 @@ public class Main1 {
         guessNum();
     }
 
-
     static void guessNum() {
         Random r = new Random();
         int rand = r.nextInt(101);
