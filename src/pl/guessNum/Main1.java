@@ -17,18 +17,21 @@ public class Main1 {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Guess the number: ");
+        int counter=1;
         while (true) {
             while (!sc.hasNextInt()) {
                 sc.next();
-                System.out.println("This is not the number, please input once again");
+                System.out.println("This is not the number, please input once again:");
             }
             int number = sc.nextInt();
             if (number < rand) {
-                System.out.println("Too little");
+                System.out.println("Too little! please input once again:");
+                counter++;
             } else if (number > rand) {
-                System.out.println("Too much!");
+                System.out.println("Too much! please input once again:");
+                counter++;
             } else if (number == rand) {
-                System.out.println("You guessed! CONGRATULATIONS!!!");
+                System.out.println("You guessed! CONGRATULATIONS!!! you guessed the "+ counter +" time");
                 break;
             }
         }
